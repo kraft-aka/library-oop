@@ -21,6 +21,10 @@ class Media {
   addRating(newRating) {
     return this._ratings.push(newRating)
   }
+  // this method should be corrected later on
+  toggleCheckOutStatus() {
+    return this._isCheckedOut ? false : true;
+  }
 }
 
 const detail = new Media('Detail', true)
@@ -29,7 +33,8 @@ console.log(detail.title)
 console.log(detail.addRating(10))
 console.log(detail.getAvarageRating())
 
-console.log(log.addRating(20))
-console.log(log.addRating(15))
-console.log(log.isCheckedOut)
-console.log(log.getAvarageRating())
+
+// console.log(log.addRating(20))
+// console.log(log.addRating(15))
+// console.log(log.isCheckedOut)
+// console.log(log.getAvarageRating())
