@@ -41,17 +41,26 @@ class Book extends Media {
 }
 
 class Movie extends Media {
-  constructor(title, director, runTime, ratings, isCheckedOut) {
-    super(title, ratings, isCheckedOut);
+  constructor(title, director, runTime) {
+    super(title);
     this._director = director;
     this._runTime = runTime;
+  }
+  get director() {
+    return this._director;
+  }
+  get runTime() {
+    return this._runTime;
   }
 }
 
 class CD extends Media {
-  constructor(title, artist, ratings, isCheckedOut) {
-    super(title,ratings,isCheckedOut);
+  constructor(title, artist) {
+    super(title);
     this._artist = artist;
+  }
+  get artist() {
+    return this._artist;
   }
 }
 
