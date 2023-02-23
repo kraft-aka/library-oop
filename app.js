@@ -28,19 +28,37 @@ class Media {
 }
 
 class Book extends Media {
-  constructor(title,author,pages) {
+  constructor(title,author,pages, ratings,isCheckedOut) {
     super(title,ratings,isCheckedOut);
     this._author = author;
     this._pages = pages;
   }
 }
 
+class Movie extends Media {
+  constructor(title,director,runTime, ratings, isCheckedOut) {
+    super(title, ratings, isCheckedOut);
+    this._director = director;
+    this._runTime = runTime;
+  }
+}
 
-const detail = new Media('Detail', true)
-const log = new Media('Log')
-console.log(detail.title)
-console.log(detail.addRating(10))
-console.log(detail.getAvarageRating())
+const batman = new Movie('Batman', 'Marvel', 120)
+console.log(batman)
+console.log(batman.getAvarageRating())
+
+// const book1 = new Book('Castle', 'Kafka Frans', 152);
+// console.log(book1.addRating(10))
+// console.log(book1.addRating(18))
+// console.log(book1.getAvarageRating())
+// console.log(book1.isCheckedOut)
+
+
+// const detail = new Media('Detail', true)
+// const log = new Media('Log')
+// console.log(detail.title)
+// console.log(detail.addRating(10))
+// console.log(detail.getAvarageRating())
 
 
 // console.log(log.addRating(20))
