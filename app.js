@@ -21,9 +21,8 @@ class Media {
   addRating(newRating) {
     return this._ratings.push(newRating);
   }
-  // this method should be corrected later on
   toggleCheckOutStatus() {
-    return this._isCheckedOut ? false : true;
+    this._isCheckedOut = !this._isCheckedOut
   }
 }
 
@@ -43,9 +42,23 @@ class Movie extends Media {
   }
 }
 
+class CD extends Media {
+  constructor(title, artist, ratings, isCheckedOut) {
+    super(title,ratings,isCheckedOut);
+    this._artist = artist;
+  }
+}
+
+// const sting = new CD('Englishman is NY', 'Sting');
+// console.log(sting.title)
+
 // const batman = new Movie("Batman", "Marvel", 120);
 // console.log(batman);
 // console.log(batman.getAvarageRating());
+// batman.toggleCheckOutStatus()
+// console.log(batman.isCheckedOut)
+// batman.toggleCheckOutStatus()
+// console.log(batman.isCheckedOut)
 
 // const book1 = new Book('Castle', 'Kafka Frans', 152);
 // console.log(book1.addRating(10))
