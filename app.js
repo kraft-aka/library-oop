@@ -15,11 +15,11 @@ class Media {
   }
 
   getAvarageRating() {
-    const sum = this._ratings.reduce((a,b)=> a+b, 0);
+    const sum = this._ratings.reduce((a, b) => a + b, 0);
     return sum / this._ratings.length || null;
   }
   addRating(newRating) {
-    return this._ratings.push(newRating)
+    return this._ratings.push(newRating);
   }
   // this method should be corrected later on
   toggleCheckOutStatus() {
@@ -28,24 +28,24 @@ class Media {
 }
 
 class Book extends Media {
-  constructor(title,author,pages, ratings,isCheckedOut) {
-    super(title,ratings,isCheckedOut);
+  constructor(title, author, pages, ratings, isCheckedOut) {
+    super(title, ratings, isCheckedOut);
     this._author = author;
     this._pages = pages;
   }
 }
 
 class Movie extends Media {
-  constructor(title,director,runTime, ratings, isCheckedOut) {
+  constructor(title, director, runTime, ratings, isCheckedOut) {
     super(title, ratings, isCheckedOut);
     this._director = director;
     this._runTime = runTime;
   }
 }
 
-const batman = new Movie('Batman', 'Marvel', 120)
-console.log(batman)
-console.log(batman.getAvarageRating())
+// const batman = new Movie("Batman", "Marvel", 120);
+// console.log(batman);
+// console.log(batman.getAvarageRating());
 
 // const book1 = new Book('Castle', 'Kafka Frans', 152);
 // console.log(book1.addRating(10))
@@ -53,13 +53,11 @@ console.log(batman.getAvarageRating())
 // console.log(book1.getAvarageRating())
 // console.log(book1.isCheckedOut)
 
-
 // const detail = new Media('Detail', true)
 // const log = new Media('Log')
 // console.log(detail.title)
 // console.log(detail.addRating(10))
 // console.log(detail.getAvarageRating())
-
 
 // console.log(log.addRating(20))
 // console.log(log.addRating(15))
