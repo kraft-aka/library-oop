@@ -22,7 +22,7 @@ class Media {
     return this._ratings.push(newRating);
   }
   toggleCheckOutStatus() {
-    this._isCheckedOut = !this._isCheckedOut
+    this._isCheckedOut = !this._isCheckedOut;
   }
 }
 
@@ -64,30 +64,28 @@ class CD extends Media {
   }
 }
 
-// const sting = new CD('Englishman is NY', 'Sting');
-// console.log(sting.title)
+//TODO
+// Add more properties to each class (movieCast, songTitles, etc.)
+// Create a CD class that extends Media.
+// In .addRating(), make sure input is between 1 and 5.
+// Create a method called shuffle for the CD class. The method returns a randomly sorted array of all the songs in the songs property.
+// Create class called Catalog that holds all of the Media items in our library.
 
-// const batman = new Movie("Batman", "Marvel", 120);
-// console.log(batman);
-// console.log(batman.getAvarageRating());
-// batman.toggleCheckOutStatus()
-// console.log(batman.isCheckedOut)
-// batman.toggleCheckOutStatus()
-// console.log(batman.isCheckedOut)
 
-// const book1 = new Book('Castle', 'Kafka Frans', 152);
-// console.log(book1.addRating(10))
-// console.log(book1.addRating(18))
-// console.log(book1.getAvarageRating())
-// console.log(book1.isCheckedOut)
+// TEST 
 
-// const detail = new Media('Detail', true)
-// const log = new Media('Log')
-// console.log(detail.title)
-// console.log(detail.addRating(10))
-// console.log(detail.getAvarageRating())
+// const historyOfEverything = new Book('A Short History of Nearly Everything', ' Bill Bryson', 544)
+// historyOfEverything.toggleCheckOutStatus();
+// console.log(historyOfEverything.isCheckedOut)
+// historyOfEverything.addRating(4)
+// historyOfEverything.addRating(5)
+// historyOfEverything.addRating(5)
+// console.log(historyOfEverything.getAvarageRating())
 
-// console.log(log.addRating(20))
-// console.log(log.addRating(15))
-// console.log(log.isCheckedOut)
-// console.log(log.getAvarageRating())
+// const speed = new Movie('Speed', 'Jan de Bont', 116);
+// speed.toggleCheckOutStatus();
+// console.log(speed.isCheckedOut)
+// speed.addRating(1)
+// speed.addRating(1)
+// speed.addRating(5)
+// console.log(speed.getAvarageRating())
