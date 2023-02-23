@@ -27,6 +27,15 @@ class Media {
   }
 }
 
+class Book extends Media {
+  constructor(title,author,pages) {
+    super(title,ratings,isCheckedOut);
+    this._author = author;
+    this._pages = pages;
+  }
+}
+
+
 const detail = new Media('Detail', true)
 const log = new Media('Log')
 console.log(detail.title)
