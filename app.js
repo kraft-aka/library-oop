@@ -15,8 +15,8 @@ class Media {
   }
 
   getAvarageRating() {
-    const sum = this._ratings.reduce((a,b)=> a+b);
-    return sum / this._ratings.length;
+    const sum = this._ratings.reduce((a,b)=> a+b, 0);
+    return sum / this._ratings.length || null;
   }
   addRating(newRating) {
     return this._ratings.push(newRating)
